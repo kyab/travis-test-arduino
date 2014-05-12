@@ -13,4 +13,9 @@ install:
  - sudo pip install pyserial
  - pwd
 
-script: ino --help && cd blink && ino build -m arduino_due_x_dbg
+script:
+ - ino --help
+ - ls -alF /usr/local/share/arduino
+ - ls -alF /usr/local/share/arduino/hardware/tools
+ - /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin/arm-none-eabi-gcc --version
+ - cd blink && ino build -m arduino_due_x_dbg
