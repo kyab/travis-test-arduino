@@ -9,6 +9,6 @@ install:
  - sudo mv arduino-1.5.6-r2/ /usr/local/share/arduino
  - git clone -b ide1.5x https://github.com/justonia/ino.git
  - cd ino && sudo make install && cd ../
- - pip install jinja2
+ - sudo pip install jinja2
 
 script: ino --help
