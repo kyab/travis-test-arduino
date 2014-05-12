@@ -1,5 +1,7 @@
 int led = 13;
 
+extern int sum(int a, int b);
+
 void setup() {
 
   Serial.begin(9600);

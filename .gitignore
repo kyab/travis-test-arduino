@@ -1,3 +1,6 @@
+blink/.build/
+blink/lib/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -19,3 +22,4 @@
 *.exe
 *.out
 *.app
+
