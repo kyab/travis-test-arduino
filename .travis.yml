@@ -7,9 +7,8 @@ install:
  - ls -alF
  - tar -xvf arduino-1.5.6-r2-linux64.tgz
  - sudo mv arduino-1.5.6-r2/ /usr/local/share/arduino
- - sudo dpkg --add-architecture i386
- - sudo apt-get update
- - sudo apt-get install libc6:i386
+ - sudo apt-get install aptitude
+ - sudo aptitude update && sudo aptitude -y install ia32-libs
  - git clone -b ide1.5x https://github.com/justonia/ino.git
  - cd ino && sudo make install && cd ../
  - sudo pip install jinja2
