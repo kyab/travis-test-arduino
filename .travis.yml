@@ -7,6 +7,9 @@ install:
  - ls -alF
  - tar -xvf arduino-1.5.6-r2-linux64.tgz
  - sudo mv arduino-1.5.6-r2/ /usr/local/share/arduino
+ - sudo dpkg --add-architecture i386
+ - sudo apt-get update
+ - sudo apt-get install libc6:i386
  - git clone -b ide1.5x https://github.com/justonia/ino.git
  - cd ino && sudo make install && cd ../
  - sudo pip install jinja2
@@ -15,9 +18,7 @@ install:
 
 script:
  - ino --help
- - ls -alF /usr/local/share/arduino
- - ls -alF /usr/local/share/arduino/hardware/tools
- - ls -alF /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi
+ - file /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin
  - ls -alF /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin
  - /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin/arm-none-eabi-gcc --version
  - cd blink && ino build -m arduino_due_x_dbg
