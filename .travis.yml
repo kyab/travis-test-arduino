@@ -10,5 +10,6 @@ install:
  - git clone -b ide1.5x https://github.com/justonia/ino.git
  - cd ino && sudo make install && cd ../
  - sudo pip install jinja2
+ - sudo pip install pyserial
 
 script: ino --help
