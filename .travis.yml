@@ -11,5 +11,6 @@ install:
  - cd ino && sudo make install && cd ../
  - sudo pip install jinja2
  - sudo pip install pyserial
+ - pwd
 
-script: ino --help
+script: ino --help && cd blink && ino build -m arduino_due_x_dbg
