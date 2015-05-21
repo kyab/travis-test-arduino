@@ -12,6 +12,10 @@ install:
  - sudo pip install --upgrade pip
  - sudo pip install jinja2
  - sudo pip install pyserial
+ - sudo pip install configobj
+ - sudo pip install ordereddict
+ - sudo pip install argparse
+ - sudo pip install glob2
  - pwd
 
 script:
