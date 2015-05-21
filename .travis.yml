@@ -7,8 +7,6 @@ install:
  - ls -alF
  - tar Jxf arduino-1.6.1-linux64.tar.xz
  - sudo mv arduino-1.6.1 /usr/local/share/arduino
- - sudo apt-get install aptitude
- - sudo aptitude update && sudo aptitude -y install ia32-libs
  - git clone -b master https://github.com/scottdarch/Arturo.git
  - cd Arturo && sudo make install && cd ../
  - sudo pip install --upgrade pip
@@ -18,7 +16,4 @@ install:
 
 script:
  - ano --help
- - file /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin
- - ls -alF /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin
- - /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin/arm-none-eabi-gcc --version
  - cd blink && ano build -m arduino_due_x_dbg
