@@ -20,4 +20,4 @@ install:
 
 script:
  - ano --help
- - cd blink && ano build -m arduino_due_x_dbg
+ - cd blink && ano build --board-model uno
