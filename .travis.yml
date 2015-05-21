@@ -3,21 +3,22 @@ compiler:
  - gcc
 
 install:
- - wget http://downloads.arduino.cc/arduino-1.5.6-r2-linux64.tgz
+ - wget http://downloads-02.arduino.cc/arduino-1.6.1-linux64.tar.xz
  - ls -alF
- - tar -xvf arduino-1.5.6-r2-linux64.tgz
- - sudo mv arduino-1.5.6-r2/ /usr/local/share/arduino
+ - tar -zxvf arduino-1.6.1-linux64.tar.xz
+ - sudo mv arduino-1.6.1 /usr/local/share/arduino
  - sudo apt-get install aptitude
  - sudo aptitude update && sudo aptitude -y install ia32-libs
- - git clone -b ide1.5x https://github.com/justonia/ino.git
- - cd ino && sudo make install && cd ../
- - sudo pip install jinja2
- - sudo pip install pyserial
+ - git clone -b master https://github.com/scottdarch/Arturo.git
+ - cd Arturo && sudo make install && cd ../
+ - sudo pip install -H --upgrade pip
+ - sudo pip install -H jinja2
+ - sudo pip install -H pyserial
  - pwd
 
 script:
- - ino --help
+ - ano --help
  - file /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin
  - ls -alF /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin
  - /usr/local/share/arduino/hardware/tools/g++_arm_none_eabi/bin/arm-none-eabi-gcc --version
- - cd blink && ino build -m arduino_due_x_dbg
+ - cd blink && ano build -m arduino_due_x_dbg
