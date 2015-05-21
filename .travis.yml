@@ -11,8 +11,9 @@ install:
  - sudo aptitude update && sudo aptitude -y install ia32-libs
  - git clone -b master https://github.com/amperka/ino.git
  - cd ino && sudo make install && cd ../
- - sudo pip install jinja2
- - sudo pip install pyserial
+ - sudo pip install -H --upgrade pip
+ - sudo pip install -H jinja2
+ - sudo pip install -H pyserial
  - pwd
 
 script:
