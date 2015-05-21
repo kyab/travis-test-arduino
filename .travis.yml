@@ -3,7 +3,7 @@ compiler:
  - gcc
 
 install:
- - wget http://arduino.cc/download.php?f=/arduino-1.5.8-linux64.tgz
+ - wget http://downloads.arduino.cc/arduino-1.5.8-linux64.tgz
  - ls -alF
  - tar -zxvf arduino-1.5.8-linux64.tgz
  - sudo mv arduino-1.5.8 /usr/local/share/arduino
