@@ -13,5 +13,4 @@ install:
 
 script:
  - ano --help
- - ano list-models
- - cd blink && ano build --board-model uno
+ - cd blink && ano build
