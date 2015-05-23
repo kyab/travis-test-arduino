@@ -9,15 +9,8 @@ install:
  - sudo mv arduino-1.6.1 /usr/local/share/arduino
  - git clone -b master https://github.com/scottdarch/Arturo.git
  - cd Arturo && sudo make install && cd ../
- - sudo pip install --upgrade pip
- - sudo pip install jinja2
- - sudo pip install pyserial
- - sudo pip install configobj
- - sudo pip install ordereddict
- - sudo pip install argparse
- - sudo pip install glob2
  - pwd
 
 script:
  - ano --help
- - cd blink && ano build --board-model uno
+ - cd blink && ano build
