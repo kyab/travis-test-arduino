@@ -6,4 +6,4 @@ install:
     - python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
 
 script:
-    - platformio ci blink/src --board=uno --board=teensy31 --board=esp01
+    - platformio ci blink/src --board=uno --board=due --board=teensy31 --board=esp01
