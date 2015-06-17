@@ -3,9 +3,13 @@
 travis-test-arduino
 ===================
 
-Experimental.
-Test Project to do Travis-CI for Arduino sketch.
+Test Project to do Travis-CI for Arduino-based sketch using [PlatformIO](http://platformio.org) and these boards:
 
-note for me:
- - Currently using Arturo(https://github.com/scottdarch/Arturo) for command line build. Arturo currently support up to Arduino 1.6.1.
-  
+* Arduino UNO
+* Teensy 3.1
+* Espressif ESP8266
+
+More boards are listed in [PltformIO Boards Explorer](http://platformio.org/#!/boards)
+
+For more detailed information as for Continuous Integration, please visit
+documentation http://docs.platformio.org/en/latest/ci/index.html
