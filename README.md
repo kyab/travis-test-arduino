@@ -6,6 +6,7 @@ travis-test-arduino
 Test Project to do Travis-CI for Arduino-based sketch using [PlatformIO](http://platformio.org) and these boards:
 
 * Arduino UNO
+* Arduino Due
 * Teensy 3.1
 * Espressif ESP8266
 
